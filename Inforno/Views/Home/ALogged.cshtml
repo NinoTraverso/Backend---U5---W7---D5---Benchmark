@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "ALogged";
+}
+
+<div class="d-flex justify-content-end w-100">
+    @Html.ActionLink("Logout", "Index", "Home", null, new { @class = "text-decoration-none text-danger bg-danger bg-opacity-50 p-2 mx-1 rounded border border-danger" })
+</div>
+
+<h2>Admin is logged in</h2>
+
+<div class="d-flex justify-content-center w-100">
+    @Html.ActionLink("Aggiungi Prodotto", "Create", "Prodotti", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Ordini", "Index", "Ordini", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Lista Ordini Evasi", "Create", "Booking", new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Numero Totale Ordini", "OrdiniCount", "Ordini", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+</div>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "ULogged";
+}
+
+<div class="d-flex justify-content-end w-100">
+    @Html.ActionLink("Logout", "Index", "Home", null, new { @class = "text-decoration-none text-danger bg-danger bg-opacity-50 p-2 mx-1 rounded border border-danger" })
+</div>
+
+<h2>ULogged</h2>
+
+<div class="d-flex justify-content-center w-100">
+    @Html.ActionLink("Ordina", "Create", "Ordini", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Dettaglio Ordine", "Create", "Dettaglis", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+</div>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Inforno.Models.Prodotti>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="d-flex justify-content-end w-100">
+    @Html.ActionLink("Logout", "Index", "Home", null, new { @class = "text-decoration-none text-danger bg-danger bg-opacity-50 p-2 mx-1 rounded border border-danger" })
+</div>
+
+<div class="d-flex justify-content-start w-100">
+    @Html.ActionLink("Generale", "ALogged", "Home", null, new { @class = "text-decoration-none text-primary bg-primary bg-opacity-50 p-2 mx-1 rounded border border-primary" })
+</div>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Costo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preparazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredienti)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Costo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preparazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredienti)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdProdotto }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdProdotto }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdProdotto })
+            </td>
+        </tr>
+    }
+
+</table>

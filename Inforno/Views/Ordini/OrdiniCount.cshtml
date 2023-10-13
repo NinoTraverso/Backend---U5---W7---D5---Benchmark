@@ -1,0 +1,20 @@
+﻿@model Inforno.Models.Ordini
+
+@{
+    ViewBag.Title = "OrdiniCount";
+}
+<div class="d-flex justify-content-end w-100">
+    @Html.ActionLink("Logout", "Index", "Home", null, new { @class = "text-decoration-none text-danger bg-danger bg-opacity-50 p-2 mx-1 rounded border border-danger" })
+</div>
+
+<div class="d-flex justify-content-center w-100">
+    @Html.ActionLink("Aggiungi Prodotto", "Create", "Prodotti", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Ordini", "Index", "Ordini", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Lista Ordini Evasi", "Create", "Booking", new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+    @Html.ActionLink("Numero Totale Ordini", "OrdiniCount", "Ordini", null, new { @class = "text-decoration-none text-success bg-success bg-opacity-50 p-2 mx-1 rounded border border-success" })
+</div>
+<h5>OrdiniCount</h5>
+
+<h3>Total Number of Orders:</h3>
+
+ <p class="text-success bg-success bg-opacity-10 d-inline-block p-2 fs-2 text rounded">@ViewBag.Count</p>
